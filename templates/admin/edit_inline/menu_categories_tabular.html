@@ -1,0 +1,35 @@
+{% extends "admin/edit_inline/tabular.html" %}
+{% load i18n admin_urls %}
+
+{% block field_sets %}
+<fieldset class="module aligned {{ inline_admin_formset.classes }}">
+  {{ inline_admin_formset.formset.management_form }}
+  <div class="menu-categories-header">
+    <h3>Menu Categories</h3>
+    <p class="help">Add categories and their special notes. Drag to reorder.</p>
+  </div>
+  <table class="menu-categories-table">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Special Notes</th>
+        <th>Order</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for inline_admin_form in inline_admin_formset %}
+        {% if not forloop.last or not inline_admin_formset.has_add_permission %}
+          <tr class="menu-category-row {% cycle "row1" "row2" %} {% if inline_admin_form.original or inline_admin_form.show_url %}has_original{% endif %}">
+          {{ inline_admin_form.form.id }}
+          <td class="category-field">{{ inline_admin_form.form.category }}</td>
+          <td class="notes-field">{{ inline_admin_form.form.special_notes }}</td>
+          <td class="order-field">{{ inline_admin_form.form.display_order }}</td>
+          <td class="delete-field">{{ inline_admin_form.deletion_field.field }}</td>
+          </tr>
+        {% endif %}
+      {% endfor %}
+    </tbody>
+  </table>
+</fieldset>
+{% endblock %} 

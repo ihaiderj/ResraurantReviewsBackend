@@ -1,0 +1,68 @@
+/* Restaurant Admin Styling */
+.model-restaurant .field-restaurant_name {
+    font-size: 16px !important;
+    color: #2c3e50;
+}
+
+.model-restaurant .field-approval_status {
+    font-weight: bold;
+}
+
+/* Restaurant List View */
+#changelist-form .column-restaurant_name {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Restaurant Detail View */
+.module h2, .module caption, .inline-group h2 {
+    background: #2c3e50;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+.field-restaurant_name a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.field-restaurant_name a:hover {
+    color: #34495e;
+}
+
+/* Fieldset styling */
+.module {
+    margin-bottom: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.form-row {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Action buttons */
+.submit-row input {
+    background: #2c3e50;
+    color: white;
+}
+
+.submit-row input:hover {
+    background: #34495e;
+}
+
+/* Restaurant section highlight */
+.app-restaurants.model-restaurant .breadcrumbs {
+    background: #2c3e50;
+    color: white;
+}
+
+.app-restaurants.model-restaurant #header {
+    background: #2c3e50;
+    color: white;
+} 
